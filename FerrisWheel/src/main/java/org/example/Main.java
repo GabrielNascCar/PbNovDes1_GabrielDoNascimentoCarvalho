@@ -1,17 +1,22 @@
 package org.example;
 
+import entities.Adult;
+import entities.Child;
+import entities.FerrisWheel;
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+        FerrisWheel ferrisWheel = new FerrisWheel(); // Creating a new Ferris wheel
+        Adult paulo = new Adult("Paulo", 42); // Adult named Paulo
+        // Paulo's children
+        Child joao = new Child("Joao", 5, paulo); // New child with Paulo as the father
+        Child maria = new Child("Maria", 12, paulo); // This is Paulo's daughter
+        // Child without defined father
+        Child pedro = new Child("Pedro", 13);
+        Child henrique = new Child("Henrique", 10);
+
     }
 }
