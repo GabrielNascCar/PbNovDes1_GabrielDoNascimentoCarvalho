@@ -47,6 +47,13 @@ public class Person {
         this.spouse = spouse;
     }
 
+    public void printFamilyTree(int level) {
+        System.out.println("  ".repeat(level) + toString());
+        for (Person child : children) {
+            child.printFamilyTree(level + 1);
+        }
+    }
+
     @Override
     public String toString() {
         if (spouse == null) {
