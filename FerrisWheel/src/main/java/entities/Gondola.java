@@ -33,4 +33,18 @@ public class Gondola {
         this.seat2 = seat2;
     }
 
+    @Override
+    public String toString() {
+        if (seat1 == null && seat2 == null) {
+            return "*" + (number + 1) + " (Empty)";
+        } else if (seat1 != null && seat2 != null) {
+            return "*" + (number + 1) + " " + seat1.getName() + " e " + seat2.getName();
+        } else if (seat1 != null) {
+            return "*" + (number + 1) + " Only " + seat1.getName();
+        } else if (seat2 != null) {
+            return "*" + (number + 1) + " Only " + seat2.getName();
+        }
+        return "*" + (number + 1) + " (Empty)";
+    }
+
 }
