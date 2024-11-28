@@ -19,6 +19,8 @@ public class Main {
         Child henrique = new Child("Henrique", 10);
 
         ferrisWheel.board(2, paulo);
+        ferrisWheel.board(2, pedro);
+        ferrisWheel.board(2, maria);
         ferrisWheel.status();
 
     }
