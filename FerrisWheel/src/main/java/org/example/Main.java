@@ -18,9 +18,17 @@ public class Main {
         Child pedro = new Child("Pedro", 13);
         Child henrique = new Child("Henrique", 10);
 
-        ferrisWheel.board(2, paulo);
-        ferrisWheel.board(2, pedro);
-        ferrisWheel.board(2, maria);
+        try{
+            ferrisWheel.board(2, joao, maria); // ERROR: Joao is under 12 and the father is not present
+            ferrisWheel.board(2, joao, paulo); // OK: Now the father is present
+            ferrisWheel.board(3, maria); // OK: Maria is 12 years old and can ride alone
+            ferrisWheel.board(13, pedro); // OK: Pedro rides alone
+            ferrisWheel.board(16, henrique); // ERROR: Henrique is under 12 and we don't know who the father is (should be Silvio, but he didn't assume responsibility!)
+            
+        }catch (Exception e){
+            System.out.println(e.getMessage());
+        }
+
         ferrisWheel.status();
 
     }
