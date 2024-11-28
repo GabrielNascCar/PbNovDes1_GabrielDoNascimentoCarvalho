@@ -10,10 +10,15 @@ public class Person {
 
     private List<Person> children = new ArrayList<Person>();
 
-    public Person() {}
-    public Person(String name, Person spouse) {
+    public Person(String name) {
         this.name = name;
-        this.spouse = spouse;
+    }
+
+    public Person(String name, Person parent) {
+        this.name = name;
+        if (parent != null) {
+            parent.addChild(this);
+        }
     }
     public String getName() {
         return name;
@@ -32,6 +37,10 @@ public class Person {
     }
     public void setChildren(List<Person> children) {
         this.children = children;
+    }
+
+    public void addChild(Person child) {
+        children.add(child);
     }
 
 }
