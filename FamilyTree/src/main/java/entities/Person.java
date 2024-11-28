@@ -43,4 +43,8 @@ public class Person {
         children.add(child);
     }
 
+    public void addSpouse(Person spouse) {
+        this.spouse = spouse;
+    }
+
 }

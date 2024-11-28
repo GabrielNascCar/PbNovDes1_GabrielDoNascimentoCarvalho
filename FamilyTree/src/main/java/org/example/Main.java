@@ -8,6 +8,7 @@ public class Main {
     public static void main(String[] args) {
 
         Person lily = new Person("Lily");
+        lily.addSpouse(new Person("Jhon"));
 
     }
 }
