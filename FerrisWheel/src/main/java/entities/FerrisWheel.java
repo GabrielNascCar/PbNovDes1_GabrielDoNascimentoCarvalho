@@ -13,4 +13,22 @@ public class FerrisWheel {
         }
     }
 
+    public void board(int position, Person person) {
+        Gondola gondola = gondolas.get(position);
+        if (person.getAge() >= 12){
+            if(gondola.getSeat1() == null){
+                gondola.setSeat1(person);
+            } else if (gondola.getSeat2() == null) {
+                gondola.setSeat2(person);
+            }
+        }
+    }
+    public void status(){
+        System.out.println("*" + "Gondola status");
+        System.out.println("* ___________________");
+        for (Gondola g : gondolas) {
+            System.out.println(g);
+        }
+    }
+
 }
