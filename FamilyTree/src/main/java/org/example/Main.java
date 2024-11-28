@@ -10,5 +10,7 @@ public class Main {
         Person lily = new Person("Lily");
         lily.addSpouse(new Person("Jhon"));
 
+        System.out.println(lily);
+
     }
 }

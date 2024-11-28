@@ -47,4 +47,13 @@ public class Person {
         this.spouse = spouse;
     }
 
+    @Override
+    public String toString() {
+        if (spouse == null) {
+            return name + " -- Single";
+        }else{
+            return name + " -- Married to: " + spouse.getName() + " -- Children:";
+        }
+    }
+
 }
